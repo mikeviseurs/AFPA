@@ -50,7 +50,7 @@
     <div class="bg-light">
         <div class="container bg-white pt-3">
             <h1 class="text-center">S'enregistrer</h1>
-            <form action="">
+            <form action="ajoutUser.php">
                 <div class="form-group">
                     <fieldset class="border p-2 mb-2">
                         <label for="login">Identifiant</label>
@@ -75,13 +75,43 @@
                                 <input class="form-control" type="text" name="nom" id="nom">
                             </div>
                             <div class="col-6">
-                                <label for="login">Prénom</label>
+                                <label for="prenom">Prénom</label>
                                 <input class="form-control" type="text" name="prenom" id="prenom">
                             </div>
                         </div>
-                        <label for="birth">Date de naissance</label>
-                        <input class="form-control" type="date" name="birth" id="birth" aria-describedby="birthHelp">
-                        <small id="birthHelp" class="form-text text-danger">Date de naissance invalide</small>
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="birth">Date de naissance</label>
+                                <input class="form-control" type="date" name="birth" id="birth" aria-describedby="birthHelp">
+                                <small id="birthHelp" class="form-text text-danger">Date de naissance invalide</small>
+                            </div>
+                            <div class="col-4 text-center">
+                                <div class="border m-2 p-1">
+                                    <h6 class="mt-3">Sexe</h6>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="sexe" id="sexe1" value="H" checked>
+                                        <label class="form-check-label" for="sexe1">Homme</label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="sexe" id="sexe2" value="F">
+                                        <label class="form-check-label" for="sexe2">Femme</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 text-center">
+                                <div class="border m-2 p-1">
+                                    <h6 class="mt-3">Type</h6>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="type" id="type1" value="P" checked>
+                                        <label class="form-check-label" for="type1">Particulier</label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="type" id="type2" value="E">
+                                        <label class="form-check-label" for="type2">Professionnel</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </fieldset>
                     <fieldset class="border p-2 mb-2">
                         <label for="adresse">Adresse</label>
@@ -114,7 +144,33 @@
                             </div>
                         </div>
                     </fieldset>
-
+                    <fieldset class="border p-2 mb-2">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="nomEntreprise">Nom de l'entreprise</label>
+                                <input class="form-control" type="text" name="nomEntreprise" id="nomEntreprise">
+                            </div>
+                            <div class="col-6">
+                                <label for="numRCS">Numéro RCS</label>
+                                <input class="form-control" type="text" name="numRCS" id="numRCS">
+                            </div>
+                        </div>
+                        <label for="adresseEntreprise">Adresse de l'entreprise</label>
+                        <input class="form-control" type="text" name="adresseEntreprise" id="adresseEntreprise">
+                        <label for="adresseEntreprise2">Supplément d'adresse</label>
+                        <input class="form-control" type="text" name="adresseEntreprise2" id="adresseEntreprise2">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="cpEntreprise">Code Postal</label>
+                                <input class="form-control" type="text" minlength="0" maxlength="6" name="cpEntreprise" id="cpEntreprise" aria-describedby="cpEntrepriseHelp">
+                                <small id="cpEntrepriseHelp" class="form-text text-danger">Code postal invalide</small>
+                            </div>
+                            <div class="col-6">
+                                <label for="villeEntreprise">Ville</label>
+                                <input class="form-control" type="text" name="villeEntreprise" id="villeEntreprise">
+                            </div>
+                        </div>
+                    </fieldset>
                     <div class="row py-3">
                         <div class="col-6"><button class="btn btn-primary btn-block" type="submit">Valider</button>
                         </div>
